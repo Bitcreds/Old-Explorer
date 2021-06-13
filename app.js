@@ -33,6 +33,7 @@ if (settings.heavy != true) {
     'getmasternodecountonline',
     'masternode',
     'masternodelist',
+    'resolvedomain',
   ]);
 } else {
   // enable additional heavy api calls
@@ -47,10 +48,32 @@ if (settings.heavy != true) {
     getsupply - Returns the current money supply.
     getmaxmoney - Returns the maximum possible money supply.
   */
-  bitcoinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
-    'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction','getmaxmoney', 'getvote',
-    'getmaxvote', 'getphase', 'getreward', 'getnextrewardestimate', 'getnextrewardwhenstr',
-    'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo']);
+  bitcoinapi.setAccess('only', [
+    'getinfo',
+    'getstakinginfo',
+    'getnetworkhashps',
+    'getdifficulty',
+    'getconnectioncount',
+    'getblockcount',
+    'getblockhash',
+    'getblock',
+    'getrawtransaction',
+    'getmaxmoney',
+    'getvote',
+    'getmaxvote',
+    'getphase',
+    'getreward',
+    'getnextrewardestimate',
+    'getnextrewardwhenstr',
+    'getnextrewardwhensec',
+    'getsupply',
+    'gettxoutsetinfo',
+    'getmasternodecount',
+    'getmasternodecountonline',
+    'masternode',
+    'masternodelist',
+    'resolvedomain'
+  ]);
 }
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
